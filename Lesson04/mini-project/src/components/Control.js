@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 
 class Control extends Component {
+
+  // hàm xử lý sự kiện khi người dùng click vào nút thêm
+  handleAdd = ()=>{
+    this.props.onAddOrEditView(true,"Save")
+  }
   render() {
     return (
       <div className="card-header">
         <div className="row">
           <div className="col-3 ">
-            <button type="button" className="btn btn-primary btn-icon-text">
+            <button type="button" className="btn btn-primary btn-icon-text"
+              onClick={this.handleAdd}
+              >
               Thêm mới sinh viên
             </button>
           </div>

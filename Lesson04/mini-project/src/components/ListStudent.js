@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import Student from "./Student";
 
-class ListStudents extends Component {
+class ListStudent extends Component {
 
+  // hàm xử lý sự kiện cho chức năng xem
+  handleEditOrView=(toggle, actioName,student)=>{
+    this.props.onHandleEditOrView(toggle,actioName,student);
+  }
   render() {
     let {renderStudents} = this.props;
-    let elementStudent = renderStudents.map((student,index)=>
-      <Student key={index}  renderStudent = {student} stt= {index +1 }/>
-    )
+    console.log("ListStudent:",renderStudents );
+    let elementStudent = renderStudents.map((student,index)=>{
+        return <Student key={index}  renderStudent={student} stt={index+1}
+          onHandleEditOrView = {this.handleEditOrView}/>
+    })
     return (
       <div className="card-body">
         <h3 className="card-title">Danh sách sinh viên</h3>
@@ -24,7 +30,10 @@ class ListStudents extends Component {
               </tr>
             </thead>
             <tbody>
-              {elementStudent}
+                {/* <Student />
+                <Student />
+                <Student /> */}
+                {elementStudent}
             </tbody>
           </table>
         </div>
@@ -33,4 +42,4 @@ class ListStudents extends Component {
   }
 }
 
-export default ListStudents;
+export default ListStudent;
