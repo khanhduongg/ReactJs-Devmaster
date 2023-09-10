@@ -33,62 +33,78 @@ export default class App extends Component {
           price: 2000,
         },
       ],
-      isToggle:false,
-      actionName:'',
-      phone:{}
+      isToggle: false,
+      actionName: "",
+      phone: {},
     };
   }
-  hanleAddorEditView =(toggle,actionName,phone)=>
-  {
+  hanleAddorEditView = (toggle, actionName, phone) => {
     this.setState({
-      isToggle:toggle,
-      actionName:actionName,
-      phone:phone
-    })
-  }
-  handleSumit = (toggle, phone)=>{
+      isToggle: toggle,
+      actionName: actionName,
+      phone: phone,
+    });
+  };
+  handleSumit = (toggle, phone) => {
     this.setState({
-      isToggle:toggle
-    })
-    if(this.state.actionName ==="SAVE"){
-      let {initialStates} = this.state;
+      isToggle: toggle,
+    });
+    if (this.state.actionName === "SAVE") {
+      let { initialStates } = this.state;
       initialStates.push(phone);
       this.setState({
-        initialStates:initialStates
-      })
-
-    }else if(this.state.actionName ==="UPDATE"){
-      let {initialStates} = this.state;
+        initialStates: initialStates,
+      });
+    } else if (this.state.actionName === "UPDATE") {
+      let { initialStates } = this.state;
       for (let i = 0; i < initialStates.length; i++) {
-        if(initialStates[i].productId===phone.productId){
-          initialStates[i]=phone;
+        if (initialStates[i].productId === phone.productId) {
+          initialStates[i] = phone;
           break;
         }
         this.setState({
-          initialStates:initialStates
-        })
+          initialStates: initialStates,
+        });
       }
     }
-  }
+  };
+  handleDelete = (phone) => {
+    let { initialStates } = this.state;
+    for (let i = 0; i < initialStates.length; i++) {
+      if (initialStates[i].productId === phone.productId) {
+        initialStates.splice(i, 1);
+        break;
+      }
+    }
+    // initialStates = this.state.initialStates.filter(x=>x.productId !== phone.productId);
+    this.setState({
+      initialStates: initialStates,
+    });
+  };
   render() {
-    let{initialStates}= this.state;
-    let elementForm = this.state.isToggle===true?
-     <Form
-     renderActionName={this.state.actionName} 
-     renderPhone={this.state.phone}
-     onSumit={this.handleSumit}
-     /> :"";
+    let { initialStates } = this.state;
+    let elementForm =
+      this.state.isToggle === true ? (
+        <Form
+          renderActionName={this.state.actionName}
+          renderPhone={this.state.phone}
+          onSumit={this.handleSumit}
+        />
+      ) : (
+        ""
+      );
     return (
       <div>
         <div className="border-3 border mx-4 my-3 py-4 row d-flex justify-content-around">
-          <Control  onAddorEditView={this.hanleAddorEditView} />
+          <Control onAddorEditView={this.hanleAddorEditView} />
           <div className="col-6 justify-content-end d-flex">
-            <ListPhone renderPhones={initialStates}
-            onhanleEditorView={this.hanleAddorEditView} />
+            <ListPhone
+              renderPhones={initialStates}
+              onhanleEditorView={this.hanleAddorEditView}
+              onDelete={this.handleDelete}
+            />
           </div>
-          <div className="col-6 border-1 border border px-0">
-            {elementForm}
-          </div>
+          <div className="col-6 border-1 border border px-0">{elementForm}</div>
         </div>
       </div>
     );

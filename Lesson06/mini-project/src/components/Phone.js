@@ -7,6 +7,9 @@ export default class Phone extends Component {
     hanleEditorView = (phone,actionName)=>{
         this.props.onhanleEditorView(true,actionName,phone);
     }
+    handleDelete = (phone)=>{
+      this.props.onDelete(phone);
+    }
   render() {
       let{renderPhone ,stt}=this.props;
     return (
@@ -27,7 +30,8 @@ export default class Phone extends Component {
                 onClick={()=>this.hanleEditorView(renderPhone,"UPDATE")}>
                   Sửa
                 </button>
-                <button type="button" className="btn btn-danger btn-icon-text">
+                <button type="button" className="btn btn-danger btn-icon-text"
+                onClick={()=>this.handleDelete(renderPhone)}>
                   Xóa
                 </button>
               </td>

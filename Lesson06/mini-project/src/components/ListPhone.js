@@ -5,12 +5,16 @@ export default class ListPhone extends Component {
     HandleEditorView=(toggle,actionName,phone)=>{
         this.props.onhanleEditorView(toggle,actionName,phone)
     }
+    handleDelete=(phone)=>{
+      this.props.onDelete(phone);
+    }
   render() {
     let { renderPhones } = this.props;
     console.log("ListPhone",renderPhones)
     let elementPhone = renderPhones.map((phone,index) => {
       return <Phone key={index} renderPhone={phone} stt={index+1}
-                 onhanleEditorView={this.HandleEditorView}/>;
+                 onhanleEditorView={this.HandleEditorView}
+                 onDelete={this.handleDelete}/>;
     });
     return (
       <div>

@@ -69,7 +69,6 @@ class Form extends Component {
     })
     
   }
-
   handleSubmit = (event)=>{
     event.preventDefault();
     this.props.onSubmit(false,this.state);
