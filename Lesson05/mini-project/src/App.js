@@ -49,6 +49,8 @@ class App extends Component {
       isToggle: false,
       actionName: "",
       student: {},
+      search:'',
+      sortBy:''
     };
   }
   handleAddOrEditView = (toggle, actionName, student) => {
@@ -80,9 +82,33 @@ class App extends Component {
         students: students,
       });
     }
-  };
+  }
+  handleDelete=(student)=>{
+    let {students}=this.state;
+    // for (let index = 0; index < students.length; index++) {
+    //   if(students[index].studentId===student.studentId){
+    //     students.splice(index,1);
+    //     break;
+    //   }
+    // }
+    students = students.filter(x=>x.studentId =! student.studentId)
+    this.setState({
+      students:students
+    })
+  }
+  handleSearch=(keyword)=>{
+      this.setState({
+        search:keyword
+      })
+  }
+  handleSort = (sortBy)=>{
+    this.setState({
+      sortBy:sortBy
+    })
+  }
+
   render() {
-    let { students } = this.state;
+    let { students ,search,sortBy } = this.state;
     let elementForm =
       this.state.isToggle === true ? (
         <Form
@@ -93,16 +119,40 @@ class App extends Component {
       ) : (
         " "
       );
+      if(search !==''){
+        students = students.filter(x=>x.studentName.toLocaleLowerCase().includes(search));
+      }
+      if(sortBy !==''){
+        let arr =sortBy.split("-")
+        if(arr[0] ==="studentName"){
+          if(arr[1]==="ASC"){
+            students.sort((x,y)=>{return x.studentName.localeCompare(y.studentName)})
+          }else{
+            students.sort((x,y)=>{return y.studentName.localeCompare(y.studentName)})
+
+          }
+        }else{
+          if(arr[1]==="ASC"){
+            students.sort((x,y)=>{return x.age-y.age});
+          }else{
+            students.sort((x,y)=>{return y.age-x.age});
+
+          }
+        }
+      }
     return (
       <div className="container-fluid">
         <Title />
         <div className="row">
           <div className="col-lg-7 grid-margin stretch-card">
             <div className="card">
-              <Control onAddOrEditView={this.handleAddOrEditView} />
+              <Control onAddOrEditView={this.handleAddOrEditView}
+                      onSearch={this.handleSearch}
+                      onSort={this.handleSort} />
               <ListStudent
                 renderStudents={students}
                 onHandleEditOrView={this.handleAddOrEditView}
+                onDelete={this.handleDelete}
               />
             </div>
           </div>

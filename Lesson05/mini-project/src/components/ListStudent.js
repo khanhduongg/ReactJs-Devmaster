@@ -5,13 +5,16 @@ class ListStudent extends Component {
   handleEditOrView=(toggle,actionName,student)=>{
     this.props.onHandleEditOrView(toggle,actionName,student);
   }
-
+  onhandleDelete = (student)=>{
+    this.props.onDelete(student);
+  }
   render() {
     let {renderStudents} = this.props;
     console.log("ListStudent:",renderStudents );
     let elementStudent = renderStudents.map((student,index)=>{
         return <Student key={index}  renderStudent={student} stt={index+1}
-            onHandleEditOrView={this.handleEditOrView}/>
+            onHandleEditOrView={this.handleEditOrView}
+            onDelete={this.onhandleDelete}/>
     })
     return (
       <div className="card-body">

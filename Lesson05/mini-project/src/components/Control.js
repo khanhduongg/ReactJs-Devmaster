@@ -1,8 +1,24 @@
 import React, { Component } from "react";
-
 class Control extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      keyword:'',
+      sortBy:''
+    }
+  }
   handleAdd = ()=>{
     this.props.onAddOrEditView(true,"Save")
+  }
+  handleSearch = ()=>{
+    this.props.onSearch(this.state.keyword)
+  }
+  handleSort = (ev)=>{
+    let value = ev.target.value;
+    this.setState({
+      sortBy:value,
+    })
+    this.props.onSort(value)
   }
   render() {
     return (
@@ -23,18 +39,21 @@ class Control extends Component {
                 className="form-control"
                 placeholder="Search Here"
                 title="Search here"
+                value={this.state.keyword}
+                onChange={(ev)=>this.setState({keyword:ev.target.value})}
               />
-              <button className="btn btn-primary btn-icon-text">
+              <button className="btn btn-primary btn-icon-text"
+              onClick={this.handleSearch}>
                 Tìm kiếm
               </button>
             </form>
           </div>
           <div className="col-3 d-flex align-items-center">
-            <select className="form-control">
-              <option value="">Sắp xếp</option>
-              <option value="">ABC def</option>
-              <option value="">ABC def</option>
-              <option value="">ABC def</option>
+            <select className="form-control" name="sortBy" value={this.state.sortBy} onChange={this.handleSort} >
+              <option value="StudentName-ASC">StudentName-ASC</option>
+              <option value="StudentName-DESC">StudentName-DESC</option>
+              <option value="age-ASC">age-ASC</option>
+              <option value="age-DESC">age-DESC</option>
             </select>
           </div>
         </div>

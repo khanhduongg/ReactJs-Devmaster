@@ -7,6 +7,9 @@ class Student extends Component {
   handleEditOrView = (student ,actionName)=>{
     this.props.onHandleEditOrView(true,actionName,student);
   }
+  handleDelete = (student) =>{
+    this.props.onDelete(student);
+  }
   render() {
     // Lấy dữ liệu truyền qua props từ ListStudent ->Student
     let {renderStudent, stt} = this.props;
@@ -36,7 +39,8 @@ class Student extends Component {
               >
                 Sửa
               </button>
-              <button type="button" className="btn btn-success btn-icon-text">
+              <button type="button" className="btn btn-success btn-icon-text"
+              onClick={()=>this.handleDelete(renderStudent)}>
                 Xóa
               </button>
             </div>
