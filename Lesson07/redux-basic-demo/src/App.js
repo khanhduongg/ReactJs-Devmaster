@@ -1,8 +1,8 @@
-
+import { Connect } from "react-redux";
 import "./App.css";
 import WellcomeRedux from "./components/WellcomeRedux";
 
-function App() {
+ function App() {
   return (
     <div className="container">
       <h1 className="mt-5">Welcome to Redux</h1>{" "}
@@ -18,6 +18,7 @@ function App() {
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
+              onChange={this.handleChangeUserName}
             ></input>
           </div>
           <div className="input-group mb-3">
@@ -29,6 +30,7 @@ function App() {
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
+              onChange={this.handleChangeCouserName}
             ></input>
           </div>
         </div>
