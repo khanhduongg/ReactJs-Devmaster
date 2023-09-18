@@ -8,7 +8,7 @@ const initState = [
     descriptions:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta asperiores veniam repellat unde debitis quisquam magnam magni ut deleniti!",
     price: 12,
-    quantity: 0,
+    quantity: 5,
     image: "aplusautomation.jpg",
   },
   {

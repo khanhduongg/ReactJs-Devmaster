@@ -15,3 +15,23 @@ export const act_buy_item = (product, quantity) => {
     quantity,
   };
 };
+export const act_delete_item = (product) => {
+  return {
+    type: types.DELETE_ITEM,
+    product,
+  };
+};
+export const act_update_item = (product, quantity) => {
+  return {
+    type: types.UPDATE_ITEM,
+    product,
+    quantity,
+  };
+};
+//action - chức năng thông báo
+export const act_change_notifyy= (content)=>{
+  return{
+    type :types.CHANGE_NOTIFY,
+    payload:content
+  }
+}
