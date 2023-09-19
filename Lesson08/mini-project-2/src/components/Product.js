@@ -70,9 +70,9 @@ const mapDispatchToProps = (dispatch) => {
     buyItem: (product, quantity) => {
       dispatch(act_buy_item(product, quantity));
     },
-    changeNotify:(content)=>{
+    changeNotify: (content) => {
       dispatch(act_change_notifyy(content));
-    }
+    },
   };
 };
 export default connect(null, mapDispatchToProps)(Product);

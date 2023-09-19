@@ -47,23 +47,22 @@ const cart = (state = initState, action) => {
       localStorage.setItem(LOCAL_STROGAE_NAME, JSON.stringify(state));
       return [...state];
     case UPDATE_ITEM: // cập nhật giỏ hàng
-    index = getIndexByProduct(state,product);
-      if(index>=0){
+      index = getIndexByProduct(state, product);
+      if (index >= 0) {
         state[index].quantity = parseInt(item.quantity);
       }
 
-     localStorage.setItem(LOCAL_STROGAE_NAME, JSON.stringify(state));
-    return [...state];
+      localStorage.setItem(LOCAL_STROGAE_NAME, JSON.stringify(state));
+      return [...state];
     default:
       return state;
     case DELETE_ITEM: // xóa sản phẩm
-    index = getIndexByProduct(state,product);
-    if(index>= 0){
-      state.splice(index,1);
-    }
-    localStorage.setItem(LOCAL_STROGAE_NAME, JSON.stringify(state));
-    return [...state];
-    
+      index = getIndexByProduct(state, product);
+      if (index >= 0) {
+        state.splice(index, 1);
+      }
+      localStorage.setItem(LOCAL_STROGAE_NAME, JSON.stringify(state));
+      return [...state];
   }
 };
 export default cart;

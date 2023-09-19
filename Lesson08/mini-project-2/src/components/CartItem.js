@@ -25,8 +25,10 @@ class CartItem extends Component {
   render() {
     let { renderCart, rollNo } = this.props;
     // xử lý hiển thị số lượng
+    // let quantity =
+    //   this.state.quantity === 0 ? renderCart.quantity : this.state.quantity;
     let quantity =
-    this.state.quantity === 0 ? renderCart.quantity : this.state.quantity;
+      this.state.quantity === 0 ? renderCart.quantity : this.state.quantity;
     return (
       <tr>
         <th scope="row">{rollNo}</th>
@@ -36,10 +38,11 @@ class CartItem extends Component {
           <input
             name="cart-item-quantity-1"
             type="number"
-            defaultValue={1}
-            value={quantity}
-            onChange={(ev) => this.setState({ quantity: ev.target.value })}
             min={1}
+            value={quantity}
+            onChange={(event) =>
+              this.setState({ quantity: event.target.value })
+            }
           />
         </td>
         <td>
