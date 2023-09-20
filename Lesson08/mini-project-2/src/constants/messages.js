@@ -1,4 +1,7 @@
-export const MSG_LOAD_SUCCESS ="Ready to buy"
-export const MSG_BUY_SUCCESS ="Buy successfull"
-export const MSG_UPDATE_SUCCESS  ="Update successfull"
-export const MMSG_DELETE_SUCCESS ="Remove successfull"
+export const MSG_LOAD_SUCCESS= 'Ready to buy'
+export const MSG_BUY_SUCCESS  ="Buy successfull"
+export const MSG_UPDATE_SUCCESS = "Update successfull"
+export const MSG_DELETE_SUCCESS = "Remove successfull"
+export const DELETE_ITEM = 'DELETE_ITEM'
+export const CHANGE_NOTIFY = 'CHANGE_NOTIFY'
+

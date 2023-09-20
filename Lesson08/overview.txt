@@ -39,7 +39,6 @@
                ++ MSG_BUY_SUCCESS  :buy successfull
                ++ MSG_UPDATE_SUCCESS : update successfull
                ++ MSG_DELETE_SUCCESS : remove successfull
-          +LocalStrogaeName lưu trữ giữ liệu
 8. xác định chức năng hệ thống (action)
      action { type:....,data: ....}
           -chức năng hiển thị thông tin sản phẩm: 
@@ -76,62 +75,7 @@
      - sử dụng Provider của react-redux
           ++ bao ngoài component <App />
                src -> index
-12.Tạo các xử lý với reducer
--listProduct.js =>
--notify.js =>
-13. Hiển thị thông báo (component notify)
-- connect component với store
-- mapStateToProps
-const mapStateToProps = (state)=>{
-  return{
-    message:state.notify
-  }
-}
-export default connect(mapStateToProps,null) (Notify);
-14. Xây dựng xử lý cart.js (reducer) quản lý giỏ hàng - Mua hàng
-- Khởi tạo : giỏ hàng rỗng
-- Khi người dùng mua hàng :(Lưu trữ dữ liệu trong LocalStrogaeName)
-     -> Phát sinh hai trạng thái :
-               + Lần đầu tiên mua hàng -> push dữ liệu vào giỏ hàng
-               + Đã mua hàng (Giỏ hàng đã tồn tại) : phát sinh 2 trường hợp
-                    ++TH1: Sản phẩm chưa có trong giỏ hàng => push sản phẩm vào giỏ hàng
-                    ++TH2: Sản phẩm đã có trong giỏ hàng => update lại số lượng
-15. Bắn action mua hàng từ component(Product) => bắn vào store 
--Product : (comp)
-     ++ quản lý số lượng mua thông qua state (Controlled component)
-     ++ xử lý sự kiện mua hàng :
-               -> bắn action (act_buy_item)-> vào reducer
-                    +++ phát sinh sự kiện click trên nút mua hàng 
-                    +++ dispatch =>
-                    +++ connect
-16. Hiển thị sản phẩm mua từ store lên component (cart.js)
--Cart :
-     ++ mapStateToProps
-     ++ connect to store
-     ++ render -> CartItem
-     ++ quản lý quantity thông qua state của component
-17. Xử lý thông tin CartTotal
--Cart :
-     -> list cart -> CartTotal
-     +CartTotal :
-          ++ thực hiện việc render có điều kiện
-18.Xử lý chức năng Xóa
-     - action (index.js)
-          ++act_delete_item(product)
-     -reducers (cart.js)
-          ++ xử lý cho case :DELETE_ITEM
-               ++ xóa trong state
-               ++ cập nhật LocalStrogae
-     - CartItem (comp):
-          +event (Delete)
-          +dispatch (act_delete_item) -> store
-          +connect (mapStateToProps) (CartItem)
-
-
-
-
-19. Xử lý chức năng cập nhật giỏ hàng
-     -action : (index.js)
-          + act_update_item(product,quantity)
-     reducers : (cart.js)
-          + Cập nhật ITEM
+12. connect store với component(listProduct)
+     - sử dụng hàm connect của react-redux
+     - mapStateToProps : kế nối state trong store với props trong component
+     

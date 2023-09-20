@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { MSG_BUY_SUCCESS } from "../constants/messages";
 import { connect } from "react-redux";
-import { act_buy_item, act_change_notifyy } from "../actions";
+import { act_buy_item, act_changed_notify } from "../actions";
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -9,11 +9,8 @@ class Product extends Component {
       quantity: 1,
     };
   }
-  // hàm xử lý sự kiện mua hàng
-  hanldeBuy = (product) => {
-    //thực hiện mua hàng :
+  handleBuy = (product) => {
     this.props.buyItem(product, this.state.quantity);
-    //thực hiện thông báo
     this.props.changeNotify(MSG_BUY_SUCCESS);
   };
   render() {
@@ -27,13 +24,12 @@ class Product extends Component {
             type="number"
             defaultValue={product.quantity}
             min={1}
-            value={this.state.quantity}
             onChange={(ev) => this.setState({ quantity: ev.target.value })}
           />
           <button
             data-product={1}
             className="btn btn-success"
-            onClick={() => this.hanldeBuy(product)}
+            onClick={() => this.handleBuy(product)}
           >
             Mua hàng
           </button>
@@ -66,13 +62,12 @@ class Product extends Component {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    // bắn action mua hàng đến reducer
     buyItem: (product, quantity) => {
-      dispatch(act_buy_item(product, quantity));
+      dispatch(act_buy_item(product,quantity));
     },
-    changeNotify: (content) => {
-      dispatch(act_change_notifyy(content));
-    },
+    changeNotify:(content)=>{
+      dispatch(act_changed_notify(content));
+    }
   };
 };
-export default connect(null, mapDispatchToProps)(Product);
+export default connect(null,mapDispatchToProps) (Product);
