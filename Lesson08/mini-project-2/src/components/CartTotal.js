@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class CartTotal extends Component {
+  
   render() {
     let { renderCarts } = this.props;
     let elementCartInfor = (

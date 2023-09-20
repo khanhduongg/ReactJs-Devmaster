@@ -42,6 +42,13 @@ const cart = (state = initState, action) => {
       }
       localStorage.setItem(LOCAL_STRORAGE_NAME,JSON.stringify(state));
       return [...state];
+      case DELETE_ITEM :
+        index =getIndexByProduct (state,product);
+        if(index >= 0){
+          state.splice(index,1);
+        }
+        localStorage.setItem(LOCAL_STRORAGE_NAME,JSON.stringify(state));
+        return [...state];
   }
   return state;
 };
