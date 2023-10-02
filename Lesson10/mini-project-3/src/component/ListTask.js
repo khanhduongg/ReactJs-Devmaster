@@ -1,8 +1,19 @@
 import React from "react";
 import Task from "./Task";
-function ListTask({renderTasks}) {
+function ListTask({ renderTasks, onEdit }) {
+  //hàm xử lý sự kiện sửa
+  const hanldeEdit = (toggle, actionName, task) => {
+    onEdit(toggle, actionName, task);
+  };
   let elementTask = renderTasks.map((item, index) => {
-    return <Task key={item.taskId} renderTask = {item} rollNo={index+1} />;
+    return (
+      <Task
+        key={item.taskId}
+        renderTask={item}
+        rollNo={index + 1}
+        onEdit={hanldeEdit}
+      />
+    );
   });
   return (
     <div>
