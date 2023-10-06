@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 
-function Control({ onAddTask, onSearch }) {
+function Control({ onAddTask, onSearch,onSort }) {
   const [searchInput, setSearchInput] = useState("");
-  const handleSearch = (e) => {
+  const handleSearch = () => {
     onSearch(searchInput);
   };
   const hanldeAdd = () => {
     onAddTask(true, "Save", null);
   };
+  // sắp xếp
+  const [sort,setSort]=useState('')
+  const hanldeSort = (event)=>{
+    onSort(event)
+  }
   return (
     <div className="row">
       <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -47,23 +52,23 @@ function Control({ onAddTask, onSearch }) {
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li>
-              <a href="/#" role="button">
+              <a href="/#" role="button"  onClick={ ()=>hanldeSort("name-asc")}>
                 Name ASC
               </a>
             </li>
             <li>
-              <a href="/#" role="button">
+              <a href="/#" role="button" onClick={ ()=>hanldeSort("name-desc")} >
                 Name DESC
               </a>
             </li>
             <li role="separator" className="divider" />
             <li>
-              <a href="/#" role="button">
+              <a href="/#" role="button" onClick={ ()=>hanldeSort("level-asc")}>
                 Level ASC
               </a>
             </li>
             <li>
-              <a href="/#" role="button">
+              <a href="/#" role="button" onClick={ ()=>hanldeSort("level-desc")}>
                 Level DESC
               </a>
             </li>

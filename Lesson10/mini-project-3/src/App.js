@@ -39,7 +39,6 @@ function App() {
   // trạng thái hiển thị giá trị trên nút submit của form
   const [actionName, setActionName] = useState("Save");
   // hàm xử lý cho sự kiện add và edit
-  // hàm xử lý cho sự kiện search
   const handleAddorEditTask = (toggle, actionName, task) => {
     setToggle(toggle);
     setActionName(actionName);
@@ -107,15 +106,87 @@ function App() {
     setTasks([...tasks]);
   };
   const [clone, setClone] = useState(tasks);
+  useEffect(() => {
+    setClone(tasks);
+  }, [tasks]);
 
   const hanldeSearch = (data) => {
     let arrSearch = clone;
     if (data !== "") {
       arrSearch = arrSearch.filter((x) => x.taskName.includes(data));
-      setClone(arrSearch); 
+      setClone(arrSearch);
     } else {
       setClone(tasks);
       console.log(tasks);
+    }
+  };
+  const hanldeSort = (event) => {
+    let arr = event.split("-");
+    if (arr[0] === "name") {
+      if (arr[1] === "asc") {
+        setTasks((prev) => {
+          prev.sort((a, b) => {
+            let x = a.taskName.toLowerCase();
+            let y = b.taskName.toLowerCase();
+            if (x < y) {
+              return -1;
+            }
+            if (x > y) {
+              return 1;
+            }
+            return 0;
+          });
+          return [...prev];
+        });
+      } else {
+        setTasks((prev) => {
+          prev.sort((a, b) => {
+            let x = a.taskName.toLowerCase();
+            let y = b.taskName.toLowerCase();
+            if (x < y) {
+              return 1;
+            }
+            if (x > y) { 
+              return -1;
+            }
+            return 0;
+          });
+          return [...prev];
+        });
+      }
+    }
+    if (arr[0] === "level") {
+      if (arr[1] === "asc") {
+        setTasks((prev) => {
+          prev.sort((a, b) => {
+            let x = a.level.toLowerCase();
+            let y = b.level.toLowerCase();
+            if (x < y) {
+              return -1;
+            }
+            if (x > y) {
+              return 1;
+            }
+            return 0;
+          });
+          return [...prev];
+        });
+      } else {
+        setTasks((prev) => {
+          prev.sort((a, b) => {
+            let x = a.level.toLowerCase();
+            let y = b.level.toLowerCase();
+            if (x < y) {
+              return 1;
+            }
+            if (x > y) {
+              return -1;
+            }
+            return 0;
+          });
+          return [...prev];
+        });
+      }
     }
   };
   return (
@@ -125,7 +196,11 @@ function App() {
         <Title />
         {/* TITLE : END */}
         {/* CONTROL (SEARCH + SORT + ADD) : START */}
-        <Control onAddTask={handleAddorEditTask} onSearch={hanldeSearch} />
+        <Control
+          onAddTask={handleAddorEditTask}
+          onSearch={hanldeSearch}
+          onSort={hanldeSort}
+        />
         {/* CONTROL (SEARCH + SORT + ADD) : END */}
         {/* FORM : START */}
         {elementFrom}
