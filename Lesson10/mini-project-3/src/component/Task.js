@@ -1,15 +1,16 @@
 import React from "react";
 
-function Task({ renderTask, rollNo, onEdit,onDelete }) {
+function Task({ renderTask, rollNo, onEdit, onDelete }) {
   // hàm xử lý sự kiện edit
   const hanldeEdit = (task) => {
     onEdit(true, "Update", task);
   };
-  const handleDelete =(task)=>{
-    onDelete (true,task)
-  }
+  // hàm xử lý sự kiên xóa
+  const handleDelete = (task) => {
+    onDelete(task);
+  };
   let elementLevel = <span className="label label-danger">Small</span>;
-  if (renderTask.level ==2 ) {
+  if (renderTask.level == 2) {
     elementLevel = <span className="label label-info">Medium</span>;
   } else if (renderTask.level == 1) {
     elementLevel = <span className="label label-default">High</span>;
@@ -28,8 +29,11 @@ function Task({ renderTask, rollNo, onEdit,onDelete }) {
           >
             Edit
           </button>
-          <button type="button" className="btn btn-danger"
-          onClick={()=> handleDelete(renderTask)}>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => handleDelete(renderTask)}
+          >
             Delete
           </button>
         </td>

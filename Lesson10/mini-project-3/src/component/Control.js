@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Control({ onAddTask }) {
+function Control({ onAddTask, onSearch }) {
+  const [searchInput, setSearchInput] = useState("");
+  const handleSearch = (e) => {
+    onSearch(searchInput);
+  };
   const hanldeAdd = () => {
-    onAddTask(true, "Save",null);
+    onAddTask(true, "Save", null);
   };
   return (
     <div className="row">
@@ -12,9 +16,15 @@ function Control({ onAddTask }) {
             type="text"
             className="form-control"
             placeholder="Search for..."
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
           />
           <span className="input-group-btn">
-            <button className="btn btn-info" type="button">
+            <button
+              className="btn btn-info"
+              type="button"
+              onClick={() => handleSearch()}
+            >
               Go!
             </button>
           </span>
@@ -37,17 +47,25 @@ function Control({ onAddTask }) {
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li>
-              <a href="/#" role="button">Name ASC</a>
+              <a href="/#" role="button">
+                Name ASC
+              </a>
             </li>
             <li>
-              <a href="/#" role="button">Name DESC</a>
+              <a href="/#" role="button">
+                Name DESC
+              </a>
             </li>
             <li role="separator" className="divider" />
             <li>
-              <a href="/#" role="button">Level ASC</a>
+              <a href="/#" role="button">
+                Level ASC
+              </a>
             </li>
             <li>
-              <a href="/#" role="button">Level DESC</a>
+              <a href="/#" role="button">
+                Level DESC
+              </a>
             </li>
           </ul>
           <span className="label label-success label-medium">NAME - DESC</span>

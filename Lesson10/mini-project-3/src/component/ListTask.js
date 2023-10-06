@@ -1,9 +1,13 @@
 import React from "react";
 import Task from "./Task";
-function ListTask({ renderTasks, onEdit }) {
+function ListTask({ renderTasks, onEdit,onDelete }) {
   //hàm xử lý sự kiện sửa
   const hanldeEdit = (toggle, actionName, task) => {
     onEdit(toggle, actionName, task);
+  };
+  // hàm xử lý sự kiện xóa
+  const handleDelete = (toggle, actionName, task) => {
+    onDelete(toggle, actionName, task);
   };
   let elementTask = renderTasks.map((item, index) => {
     return (
@@ -12,6 +16,7 @@ function ListTask({ renderTasks, onEdit }) {
         renderTask={item}
         rollNo={index + 1}
         onEdit={hanldeEdit}
+        onDelete={handleDelete}
       />
     );
   });

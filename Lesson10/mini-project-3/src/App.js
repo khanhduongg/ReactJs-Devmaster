@@ -4,7 +4,6 @@ import Control from "./component/Control";
 import Form from "./component/Form";
 import ListTask from "./component/ListTask";
 import { useEffect } from "react";
-
 function App() {
   const listTaskInit = [
     { taskId: 1, taskName: "Học lập trình frontend", level: 1 },
@@ -40,6 +39,7 @@ function App() {
   // trạng thái hiển thị giá trị trên nút submit của form
   const [actionName, setActionName] = useState("Save");
   // hàm xử lý cho sự kiện add và edit
+  // hàm xử lý cho sự kiện search
   const handleAddorEditTask = (toggle, actionName, task) => {
     setToggle(toggle);
     setActionName(actionName);
@@ -84,9 +84,7 @@ function App() {
       setTasks([...tasks]);
     }
   };
-  const hanleDelete = (toggle, actionName, task) => {
-    setToggle(toggle);
-  };
+  // hàm xử lý sự kiện xóa
   const [toggle, setToggle] = useState(false);
   let elementFrom =
     toggle === true ? (
@@ -99,6 +97,27 @@ function App() {
     ) : (
       ""
     );
+  const handleDelete = (task) => {
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].taskId === task.taskId) {
+        tasks.splice(i, 1);
+        break;
+      }
+    }
+    setTasks([...tasks]);
+  };
+  const [clone, setClone] = useState(tasks);
+
+  const hanldeSearch = (data) => {
+    let arrSearch = clone;
+    if (data !== "") {
+      arrSearch = arrSearch.filter((x) => x.taskName.includes(data));
+      setClone(arrSearch); 
+    } else {
+      setClone(tasks);
+      console.log(tasks);
+    }
+  };
   return (
     <div>
       <div className="container">
@@ -106,16 +125,16 @@ function App() {
         <Title />
         {/* TITLE : END */}
         {/* CONTROL (SEARCH + SORT + ADD) : START */}
-        <Control onAddTask={handleAddorEditTask} />
+        <Control onAddTask={handleAddorEditTask} onSearch={hanldeSearch} />
         {/* CONTROL (SEARCH + SORT + ADD) : END */}
         {/* FORM : START */}
         {elementFrom}
         {/* FORM : END */}
         {/* LIST : START */}
         <ListTask
-          renderTasks={tasks}
+          renderTasks={clone}
           onEdit={handleAddorEditTask}
-          onDelete={hanleDelete}
+          onDelete={handleDelete}
         />
       </div>
     </div>
