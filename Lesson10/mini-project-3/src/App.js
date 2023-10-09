@@ -188,6 +188,11 @@ function App() {
         });
       }
     }
+    if( arr[0] ==='sort'){
+      if(arr[1]==='by'){
+        setTasks(tasks)
+      }
+    }
   };
   return (
     <div>

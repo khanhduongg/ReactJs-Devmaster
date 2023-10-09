@@ -48,7 +48,7 @@ function Control({ onAddTask, onSearch,onSort }) {
             aria-haspopup="true"
             aria-expanded="true"
           >
-            Sort by <span className="caret" />
+            Sort by <span className="caret" onClick={()=>hanldeSort("sort-by")} />
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li>
@@ -66,7 +66,7 @@ function Control({ onAddTask, onSearch,onSort }) {
               <a href="/#" role="button" onClick={ ()=>hanldeSort("level-asc")}>
                 Level ASC
               </a>
-            </li>
+            </li>  
             <li>
               <a href="/#" role="button" onClick={ ()=>hanldeSort("level-desc")}>
                 Level DESC

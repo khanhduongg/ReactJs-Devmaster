@@ -1,0 +1,13 @@
+{
+    "users":[
+        {"id":111,"username":"Duong Duong","password":"123"} ,
+        {"id":222,"username":"Duong Duong","password":"123"} ,
+        {"id":333,"username":"Duong Duong","password":"123"} 
+    ],
+    "students":[
+        {"studentId":"SV011","studentName":"Nguyễn văn A","age":"22"},
+        {"studentId":"SV012","studentName":"Nguyễn văn b","age":"23"},
+        {"studentId":"SV013","studentName":"Nguyễn văn c","age":"24"}
+
+    ]
+}
