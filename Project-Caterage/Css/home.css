@@ -1,18 +1,3 @@
-*{
-    font-family: Gotham-Medium, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all 0.2s linear;
-    list-style-type: none;
-}
-html {
-font-size: 16px;    
-}
-
 
 #header {
     position: fixed;
@@ -117,20 +102,6 @@ font-size: 16px;
     color:#2c2e53;
     font-size: 1.2rem;
     font-weight: 700;
-}
-h2{
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color:#2c2e53;
-    font-weight: 700;
-}
-hr{
-    margin: 1rem 3rem;
-    border-top: 0.35rem solid #bd945f;
-    color: #bd945f;
-    opacity: 1;
 }
 #home-aboutUs {
     background-image: url(../Font/img/bg-about-us.jpg);
@@ -330,4 +301,131 @@ hr{
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+#home-contact {
+    background-image: url(../Font/img/lienhe-bg.jpg);
+    background-size: cover;
+    padding: 0;
+}
+.home-contact {
+    margin-top: 4rem;
+    padding: 4rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.home-contact .row {
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 700;
+}
+.home-contact .image {
+    width: 10rem;
+    position: absolute;
+    top: -5rem;
+    left: 1rem;
+}
+.home-contact__content {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0 0 0 12rem;
+}
+.home-contact__form input {
+    border: 0.2rem solid #fff;
+    padding: 0.6rem 1.5rem;
+    width: 18rem;
+    font-size: 0.8rem;
+}
+.home-contact__form p {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+}
+b, strong {
+    font-weight: bolder;
+}
+.home-contact__form button {
+    margin: 0.6rem;
+    background: #fff;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--color);
+    border: 0.2rem solid #fff;
+    font-weight: 700;
+
+}
+.home-contact__form button:hover {
+    color: #fff;
+    background: #bd945f;
+}
+#footer {
+    background: #363636;
+}
+.allInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    margin: 0 12rem;
+}
+.allInfo .info h5 {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.allInfo .info h5:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 5rem;
+    border-top: 0.3rem solid #fff;
+}
+.allInfo .info > p {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.allInfo .list-footer li .icon {
+    width: 1.5rem;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+.allInfo ul li {
+    color: #d6d6d6;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    margin-top: 0.5rem;
+}
+.list-footer {
+padding: 0;
+}
+.allInfo .list-footer li:first-child {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.allInfo ul li a {
+    color: #d6d6d6;
+    text-decoration: none;
+}
+.allInfo .info .social img {
+    height: 1.75rem;
+}
+.allInfo .info .social {
+    margin: 1.5rem 0;
+}
+.credit {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+}
+.credit a {
+text-decoration: none;
+font-weight: 700;
 }

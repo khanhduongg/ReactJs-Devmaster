@@ -1,3 +1,31 @@
+*{
+    font-family: Gotham-Medium, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    list-style-type: none;
+}
+html {
+font-size: 16px;    
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color:#2c2e53;
+    font-weight: 700;
+}
+hr{
+    margin: 1rem 3rem;
+    border-top: 0.35rem solid #bd945f;
+    color: #bd945f;
+    opacity: 1;
+}
 .text-none {
     text-decoration: none;
 }
