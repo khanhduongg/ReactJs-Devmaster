@@ -1,0 +1,119 @@
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 30rem;
+}
+.carousel-inner .carousel-item {
+    position: relative;
+}
+.carousel-inner .carousel-item {
+    position: relative;
+}
+.carousel-btn {
+    position: absolute;
+    top: 16rem;
+    left: 70%;
+}
+.carousel-btn .btn-buy {
+    padding: 0.2rem 1.3rem;
+    color: #2c2e53;
+    background-color: #fff;
+    border: 0.2rem solid #fff;
+    font-weight: 600;
+}
+.carousel-btn:hover .btn-buy {
+    background-color: #2c2e53;
+    color: #fff;
+}
+.all-product {
+    padding-bottom: 3rem;
+}
+
+.box-content {
+    background: #f3f3f3;
+    margin-top: 3rem;
+}
+.all-product h4 {
+    font-size: 1.5rem;
+}
+.all-product__item {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 3rem;
+}
+.all-product__item--title {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 0 2rem;
+}
+.all-product__item .row {
+    padding: 0 2rem;
+}
+.all-product__item {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 3rem;
+}
+.product-card {
+    padding: 5px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+}
+.product-card__image {
+    width: 100%;
+    height: 8.5rem;
+    object-fit: cover;
+}
+.product-card__content {
+    margin-top: 1rem;
+    text-align: center;
+}
+.product-card__content .title {
+    color: #2c2e53;
+    font-weight: 600;
+}
+.product-card__content .old-price {
+    font-size: 0.85rem;
+    color: #888888;
+    text-decoration: line-through;
+}
+.product-card__content .new-price {
+    font-size: 0.85rem;
+    color: #222222;
+}
+.all-product__item--title .see-all:hover {
+    color: #bd945f;
+}
+.btn:hover{
+    color: #222222;
+    background: #bd945f;
+}
+.product-card__group-btn{
+    text-align: center;
+    font-weight: 700;
+}
