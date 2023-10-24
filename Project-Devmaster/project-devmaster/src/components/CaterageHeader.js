@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function Caterageheader() {
+function CaterageHeader() {
   return (
     <div>
       <header id="header" className=" d-flex ">
@@ -28,18 +28,18 @@ function Caterageheader() {
                 </Link>
               </li>
               <li>
-                <Link to={"/CaterageIntroduce"} className="nav-link">
-                  Giới Thiệu
+                <Link to={"/CaterageNews"} className="nav-link">
+                  Tin Tức
                 </Link>
               </li>
               <li>
-                <Link to={"/CaterageIntroduce"} className="nav-link">
-                  Giới Thiệu
+                <Link to={"/CateragePartner"} className="nav-link">
+                  Đối Tác
                 </Link>
               </li>
               <li>
-                <Link to={"/CaterageIntroduce"} className="nav-link">
-                  Giới Thiệu
+                <Link to={"/CaterageContact"} className="nav-link">
+                  Liên Hệ
                 </Link>
               </li>
             </ul>
@@ -61,4 +61,4 @@ function Caterageheader() {
   );
 }
 
-export default Caterageheader;
+export default CaterageHeader;

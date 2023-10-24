@@ -1,0 +1,43 @@
+.banner-page {
+    position: relative;
+}
+.box-contact {
+    width: 70%;
+}
+.wrapper-box {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    top: -3rem;
+    padding: 3rem;
+}
+.box-contact p {
+    text-transform: uppercase;
+    font-family: Gotham-Ultra;
+    color: #bd945f;
+    font-size: 1.5rem;
+}
+.form-contact input {
+    border: 0.2rem solid #bd945f;
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.form-contact {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.box-contact__btn {
+    padding: 0.4rem 2rem;
+    background-color: #bd945f;
+    color: #fff;
+    margin-top: 0.5rem;
+    border: 0.2rem solid #bd945f;
+}
+.box-contact__btn:hover {
+    color: #bd945f;
+    background-color: #fff;
+}

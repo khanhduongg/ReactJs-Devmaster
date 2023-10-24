@@ -9,7 +9,7 @@ function CaterageProduct() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  src="../Font/img/san-pham/trai-nghiem1.jpg"
+                  src="../img/san-pham/trai-nghiem1.jpg"
                   alt=""
                   width={1100}
                   height={500}
@@ -37,7 +37,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -259,7 +259,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -481,7 +481,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -703,7 +703,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -935,7 +935,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -1157,7 +1157,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -1389,7 +1389,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -1611,7 +1611,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png  "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png  "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -1833,7 +1833,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -2065,7 +2065,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -2287,7 +2287,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -2509,7 +2509,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -2731,7 +2731,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -2963,7 +2963,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -3185,7 +3185,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -3417,7 +3417,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -3649,7 +3649,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png "
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png "
                     alt="san pham"
                     className="product-card__image"
                   />
@@ -3881,7 +3881,7 @@ function CaterageProduct() {
               <div className="col-md-3">
                 <div className="product-card">
                   <img
-                    src="../Font/img/san-pham/phong-khach-ban-uong-nuoc.png"
+                    src="../img/san-pham/phong-khach-ban-uong-nuoc.png"
                     alt="san pham"
                     className="product-card__image"
                   />
