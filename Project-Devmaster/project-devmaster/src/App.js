@@ -7,7 +7,7 @@ import CaterageIntroduce from "./components/CaterageIntroduce";
 import CaterageProduct from "./components/CaterageProduct";
 import CaterageNews from "./components/CaterageNews";
 import CateragePartner from "./components/CateragePartner";
-import CaterageContact from"./components/CaterageContact"
+import CaterageContact from "./components/CaterageContact";
 function App() {
   return (
     <div className="">
@@ -20,7 +20,6 @@ function App() {
           <Route path="/CaterageNews" element={<CaterageNews />} />
           <Route path="/CateragePartner" element={<CateragePartner />} />
           <Route path="/CaterageContact" element={<CaterageContact />} />
-
         </Routes>
       </BrowserRouter>
       <CaterageFooter />
