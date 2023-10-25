@@ -67,10 +67,6 @@ function About() {
                             <div className="see-more">
                               <a className="btn text-white" href="/">
                                 Xem thêm&nbsp;
-                                <i
-                                  className=" text-white fa fa-angle-right"
-                                  aria-hidden="true"
-                                />
                               </a>
                             </div>
                           </div>
