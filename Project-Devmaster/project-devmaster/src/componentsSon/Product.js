@@ -1,15 +1,57 @@
+import { useState } from "react";
+import axios from "../Api/api-local";
+function Product({ product }) {
+  const { postData, setPostData } = product;
+  const [favorites, setFavorites] = useState([]);
+  const toggleFavorite = postData.find((product) => product.id === product);
 
-function Product({product}) {
-  // const [product, setProduct] = useState([]);
-
-  // useEffect(() => {
-  //   // get api banner
-  //   const getAllData = async () => {
-  //     let res = await axios.get("products");
-  //     setProduct(res.data);
-  //   };
-  //   getAllData();
-  // }, []);
+  if (!product) {
+    return;
+  }
+  if (favorites.includes(product)) {
+    // Xóa sản phẩm khỏi danh sách yêu thích
+    axios
+      .delete(`wishlish/${product.id}`)
+      .then((response) => {
+        if (response.data.success) {
+          setFavorites(favorites.filter((id) => id !== product));
+        }
+      })
+      .catch((error) => {
+        console.error("Lỗi khi xóa sản phẩm khỏi danh sách yêu thích:", error);
+      });
+  } else {
+    // Thêm sản phẩm vào danh sách yêu thích
+    axios
+      .post("wishlish", product)
+      .then((response) => {
+        if (response.data.success) {
+          setFavorites([...favorites, product]);
+        }
+      })
+      .catch((error) => {
+        console.error("Lỗi khi thêm sản phẩm vào danh sách yêu thích:", error);
+      });
+  }
+  // if (iconProduct == "fa-regular fa-heart") {
+  //   try {
+  //     setIsLoading(true);
+  //     // Thực hiện yêu cầu POST
+  //     const response = await axios.post("wishlist", product);
+  //     toast.success("thêm sản phẩm thành công");
+  //     // Lưu trạng thái POST thành côn
+  //     setPostData(response.data);
+  //   } catch (error) {
+  //     // Xử lý lỗi POST
+  //     console.error(error);
+  //     toast.error("Sản phẩm đã tồn tại trong danh mục yêu thích");
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  //
+  const hanldeToggleFavorite = (product) => {
+    toggleFavorite(product);
+  };
   return (
     <div className="col-md-3">
       <div className="product-card">
@@ -18,7 +60,7 @@ function Product({product}) {
           alt="san pham"
           className="product-card__image "
         />
-        <div className="product-card__content">
+        <div className="product-card__content" key={product.id}>
           <span className="title">
             {product.product_name}
             <br />
@@ -233,18 +275,21 @@ function Product({product}) {
           </span>
         </div>
         <div className="product-card__group-btn">
-          <a href="/san-pham/phong-khach/ban-uong-nuoc">
+          <a>
             <>
               <button className="btn">
                 <i className="fa-solid fa-magnifying-glass" />
               </button>
               <button className="btn">
-                <i className="fa-regular fa-heart" />
+                <i
+                  className={`fa-regular fa-heart ${
+                    favorites.includes(product.id) ? "active" : ""
+                  }`}
+                  onClick={() => hanldeToggleFavorite(product.id)}
+                />
               </button>
             </>
           </a>
-          <button className="btn" type="button" id="liveToastBtn">
-          </button>
         </div>
       </div>
     </div>
