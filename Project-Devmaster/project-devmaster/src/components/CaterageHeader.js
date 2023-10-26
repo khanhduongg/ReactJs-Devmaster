@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Icon from "../componentsSon/Icon";
+import IconCart from "../componentsSon/IconCart";
+import IconHeart from "../componentsSon/IconHeart";
+import IconSearch from "../componentsSon/IconSearch";
 function CaterageHeader() {
   return (
     <>
@@ -46,7 +48,14 @@ function CaterageHeader() {
             </ul>
           </div>
         </div>
-        <Icon/>
+        <div className="group-icon">
+          <IconCart/>
+          <IconHeart/>
+          <IconSearch/>
+        {/* <div id="menu-bar">
+    <i className="fa-solid fa-bars" />
+  </div> */}
+      </div>
       </header>
     </>
   );

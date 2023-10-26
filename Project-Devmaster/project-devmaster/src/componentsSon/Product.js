@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "../Api/api-local";
 import { toast } from "react-toastify";
 function Product({ product, iconProduct }) {
@@ -14,7 +14,8 @@ function Product({ product, iconProduct }) {
         const response = await axios.post("wishlist", product);
         // Lưu trạng thái POST thành côn
         setPostData(response.data);
-        // localStorage.setItem("wishlistItems", JSON.stringify(product));
+        const data = response.data
+        localStorage.setItem("wishlistItems", JSON.stringify(data));
         toast.success("thêm sp thành công");
       } catch (error) {
         toast.error(" Sản phẩm tồn tại ");
