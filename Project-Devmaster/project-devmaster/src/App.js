@@ -8,9 +8,11 @@ import CaterageProduct from "./components/CaterageProduct";
 import CaterageNews from "./components/CaterageNews";
 import CateragePartner from "./components/CateragePartner";
 import CaterageContact from "./components/CaterageContact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
-    <div className="">
+    <>
       <BrowserRouter>
         <CaterageHeader />
         <Routes>
@@ -21,9 +23,10 @@ function App() {
           <Route path="/CateragePartner" element={<CateragePartner />} />
           <Route path="/CaterageContact" element={<CaterageContact />} />
         </Routes>
+        <CaterageFooter />
       </BrowserRouter>
-      <CaterageFooter />
-    </div>
+      <ToastContainer />
+    </>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Icon from "../componentsSon/Icon";
 function CaterageHeader() {
   return (
-    <div>
+    <>
       <header id="header" className=" d-flex ">
         <div className="header-logo">
           <a href="">
@@ -45,19 +46,9 @@ function CaterageHeader() {
             </ul>
           </div>
         </div>
-        <div className="header-item-icon ">
-          <a href="">
-            <i className="fa-solid fa-bag-shopping" />
-          </a>
-          <a href="">
-            <i className="fa-regular fa-heart" />
-          </a>
-          <a href="">
-            <i className="fa-solid fa-magnifying-glass" />
-          </a>
-        </div>
+        <Icon/>
       </header>
-    </div>
+    </>
   );
 }
 

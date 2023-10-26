@@ -5,7 +5,7 @@ import listNameProducts from "../data/listNameProducts";
 import Slider from "../componentsSon/Slider";
 function Products() {
   const [listProducts, setListProducts] = useState([]);
-
+  const [iconProduct, setIconProduct] = useState("fa-regular fa-heart");
   useEffect(() => {
     // get api banner
     const getAllData = async () => {
@@ -13,37 +13,36 @@ function Products() {
       setListProducts(res.data);
     };
     getAllData();
-  }, []); 
-  const elementProducts =listNameProducts.map((item,index)=>{
-    return(
+  }, []);
+  const elementProducts = listNameProducts.map((item, index) => {
+    return (
       <div className="all-product__item">
-      <div className="all-product__item--title">
-        <h4>{Object.values(item)}</h4>
-        <a className="see-all" href="/san-pham/phong-khach">
-          Xem tất cả
-        </a>
+        <div className="all-product__item--title">
+          <h4>{Object.values(item)}</h4>
+          <a className="see-all" href="/san-pham/phong-khach">
+            Xem tất cả
+          </a>
+        </div>
+        <div className="row">
+          {listProducts
+            .filter((x) => x.category === item)
+            .slice(0, 4)
+            .map((product) => (
+              <Product
+                iconProduct={iconProduct}
+                product={product}
+                key={product.id}
+              />
+            ))}
+        </div>
       </div>
-      <div className="row">
-      {listProducts
-      .filter((x) => x.category === item)
-      .slice(0, 4)
-      .map((product) => (
-        <Product
-          product={product}
-          key={product.id}
-        />
-      ))}
-      </div>
-    </div>
-    )
-  })
+    );
+  });
   return (
     <div>
       <section>
-        <Slider/>
-        <div className="box-content all-product" >
-          {elementProducts}
-        </div>
+        <Slider />
+        <div className="box-content all-product">{elementProducts}</div>
       </section>
     </div>
   );

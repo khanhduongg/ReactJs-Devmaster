@@ -38,10 +38,30 @@
                 </ul>
             </div>
         </div>
-        <div class="header-item-icon ">
-            <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
-            <a href=""><i class="fa-regular fa-heart"></i></a>
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <div class="group-icon">
+            <div class="icon icon-cart"><a href="/gio-hang"><i class="fa-solid fa-bag-shopping"></i></a>
+                <div class="box box-cart">
+                    <div class="box__empty">
+                        <p class="box__title">Giỏ hàng của bạn đang trống !</p><a href="/san-pham">
+                            <div class="check__btn">Mua hàng ngay</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="icon icon-wishlist"><a href="/danh-sach-yeu-thich"><i class="fa-regular fa-heart"></i></a>
+                <div class="box box-wishlist">
+                    <div class="box__empty">
+                        <p class="box__title">Danh sách yêu thích trống !</p><a href="/san-pham">
+                            <div class="check__btn">Xem thêm sản phẩm</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="search-form"><input id="search" type="text" class="search-box" required="" value=""><label
+                    for="search">Bạn cần tìm sản phẩm gì?</label><a class="search-form__search" href="/tim-kiem?key="><i
+                        class="fa-solid fa-magnifying-glass"></i></a></div>
+            <div id="menu-bar"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
@@ -288,8 +308,8 @@
             </h2>
         </div>
         <div class="home-partner">
-            <div class="slick-slider slider slick-initialized" style="overflow: hidden;" dir="ltr"><button type="button" data-role="none"
-                    class="slick-arrow slick-prev" style="display: block;"> Previous</button>
+            <div class="slick-slider slider slick-initialized" style="overflow: hidden;" dir="ltr"><button type="button"
+                    data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button>
                 <div class="slick-list">
                     <div class="slick-trac d-flex align-items-center "
                         style="width: 4636px; opacity: 1; transform: translate3d(-1464px, 0px, 0px);">
@@ -491,4 +511,5 @@
             href="https://www.facebook.com/VCNDevmaster/" title="Viện Công Nghệ Và Đào Tạo Devmaster">Devmaster
             Academy</a></div>
 </body>
+
 </html>
