@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "../Api/api-local";
 import { toast } from "react-toastify";
 function Product({ product, iconProduct }) {
@@ -14,12 +14,9 @@ function Product({ product, iconProduct }) {
         const response = await axios.post("wishlist", product);
         // Lưu trạng thái POST thành côn
         setPostData(response.data);
-        const data = response.data
-        localStorage.setItem("wishlistItems", JSON.stringify(data));
         toast.success("thêm sp thành công");
       } catch (error) {
         toast.error(" Sản phẩm tồn tại ");
-
         // Xử lý lỗi POST
         console.error("aaa");
       } finally {
@@ -29,10 +26,35 @@ function Product({ product, iconProduct }) {
       console.log(1);
     }
   };
+
+  const fetchDataFromAPI = async () => {
+    try {
+      setIsLoading(true);
+
+      // Thực hiện yêu cầu GET hoặc loại yêu cầu khác
+      const response = await axios.get("wishlist");
+
+      // Lưu dữ liệu trả về từ yêu cầu GET
+      setResponseData(response.data);
+    } catch (error) {
+      // Xử lý lỗi GET hoặc loại yêu cầu khác
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    // Gọi hàm fetchDataFromAPI khi postData thay đổi (sau khi POST hoàn thành)
+    if (postData) {
+      fetchDataFromAPI();
+    }
+  }, [postData]);
   const hanldeToggleFavorite = (product) => {
     toggleFavorite(product);
   };
-
+  localStorage.setItem("wishlistItems", JSON.stringify(responseData));
+  console.log(responseData);
   return (
     <>
       {isLoading ? (

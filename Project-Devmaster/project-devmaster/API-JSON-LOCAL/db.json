@@ -924,72 +924,6 @@
       "id": "1"
     },
     {
-      "product_name": "Kệ đồ",
-      "price": 4990000,
-      "size": [
-        "Rộng 0.4 x Cao 0.5 x Dài 1.6m"
-      ],
-      "category": "Phòng khách",
-      "old_price": 6000000,
-      "material": [
-        {
-          "name": "Gỗ lim",
-          "quantity": 0
-        },
-        {
-          "name": "Gỗ sồi",
-          "quantity": 0
-        }
-      ],
-      "image": [
-        "images/products/phong-khach/008.jpg"
-      ],
-      "details": {
-        "des1": "- Kệ để đồ trang trí với màu sắc sang trọng được làm từ loại gỗ nhập khẩu cao cấp, đảm bảo chắc chắn và bền đẹp. Loại kệ này rất thích hợp dùng cho văn phòng và gia đình để trưng bày đồ trang trí và sách.",
-        "des2": "- Thông số ...",
-        "des3": "- Bảo quản ...",
-        "des4": "- Bảo hành 1 năm ...",
-        "des5": "- Cam kết ..."
-      },
-      "rating": 4,
-      "img_slide": [
-        "images/products/phong-khach/008.jpg"
-      ],
-      "color": "Nâu vân gỗ",
-      "id": "8"
-    },
-    {
-      "product_name": "SOFA",
-      "price": 8400000,
-      "size": [
-        "Dài 2.4 x Rộng 1.6 x Cao 0.8m"
-      ],
-      "category": "Phòng khách",
-      "old_price": 10000000,
-      "material": [
-        {
-          "name": "Bọc vải nỉ",
-          "quantity": 50
-        }
-      ],
-      "image": [
-        "images/products/phong-khach/011.jpg"
-      ],
-      "details": {
-        "des1": "- Nội thất Hoàng Hoan là đơn vị chuyên cung cấp và sản xuất tất cả các loại sofa văng sofa góc, sofa giá rẻ, sofa hiện đại.",
-        "des2": "- Thông số ...",
-        "des3": "- Bảo quản ...",
-        "des4": "- Bảo hành 1 năm ...",
-        "des5": "- Cam kết ..."
-      },
-      "rating": 5,
-      "img_slide": [
-        "images/products/phong-khach/011.jpg"
-      ],
-      "color": "Vàng cam",
-      "id": "11"
-    },
-    {
       "product_name": "Kệ TV",
       "price": 4560000,
       "size": [
@@ -1029,24 +963,28 @@
       "id": "2"
     },
     {
-      "product_name": "Giường châu Âu",
-      "price": 8999000,
+      "product_name": "Kệ đồ",
+      "price": 4990000,
       "size": [
-        "Dài 2.2 x Rộng 2 x Cao 1.2m"
+        "Rộng 0.4 x Cao 0.5 x Dài 1.6m"
       ],
-      "category": "Phòng ngủ",
-      "old_price": 11999000,
+      "category": "Phòng khách",
+      "old_price": 6000000,
       "material": [
         {
-          "name": "Khung gỗ bọc da PU",
-          "quantity": 50
+          "name": "Gỗ lim",
+          "quantity": 0
+        },
+        {
+          "name": "Gỗ sồi",
+          "quantity": 0
         }
       ],
       "image": [
-        "images/products/phong-ngu/013.jpg"
+        "images/products/phong-khach/008.jpg"
       ],
       "details": {
-        "des1": "- Không chỉ ghi điểm nhờ thiết kế ẩn tượng với các chi tiết điêu khắc công phu, tỉ mỉ sản phẩm giường ngủ tân cổ điển bằng gỗ tự nhiên còn tạo nên điểm nhấn với chất liệu cao cấp, có độ bền cao. Gỗ tự nhiên còn được xử lý chống cong vênh, mối mọt và ẩm mốc giúp sản phẩm luôn bền đẹp với thời gian.",
+        "des1": "- Kệ để đồ trang trí với màu sắc sang trọng được làm từ loại gỗ nhập khẩu cao cấp, đảm bảo chắc chắn và bền đẹp. Loại kệ này rất thích hợp dùng cho văn phòng và gia đình để trưng bày đồ trang trí và sách.",
         "des2": "- Thông số ...",
         "des3": "- Bảo quản ...",
         "des4": "- Bảo hành 1 năm ...",
@@ -1054,10 +992,10 @@
       },
       "rating": 4,
       "img_slide": [
-        "images/products/phong-ngu/013.jpg"
+        "images/products/phong-khach/008.jpg"
       ],
-      "color": "Trắng",
-      "id": "13"
+      "color": "Nâu vân gỗ",
+      "id": "8"
     },
     {
       "product_name": "Tủ âm tường",
