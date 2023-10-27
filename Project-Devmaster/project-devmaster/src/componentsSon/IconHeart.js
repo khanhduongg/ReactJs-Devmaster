@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, } from "react";
 import ListProductHearts from "./ListProductHearts";
-
+import { context } from "../context/Context";
+import { useContext } from "react";
 function IconHeart() {
-  const [data, setData] = useState([]);
-  const storedData = JSON.parse(localStorage.getItem("wishlistItems"));
+  const { responseData } = useContext(context);
+  const { data, setData } = useContext(context);
   useEffect(() => {
-    // Lấy dữ liệu từ Local Storage
-  }, [data]);
-  const handleClickIconWishList = () => {
-    setData(storedData);
-  };
+    setData(JSON.parse(localStorage.getItem("wishlistItems")));
+  }, [responseData]);
   return (
     <>
       <div className="icon icon-wishlist">
-        <a onClick={handleClickIconWishList}>
+        <a>
           <i className="fa-regular fa-heart" />
         </a>
         {data === null || data.length === 0 ? (

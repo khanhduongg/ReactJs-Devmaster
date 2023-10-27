@@ -12,7 +12,7 @@ function Product({ product, iconProduct }) {
         setIsLoading(true);
         // Thực hiện yêu cầu POST
         const response = await axios.post("wishlist", product);
-        // Lưu trạng thái POST thành côn
+        // Lưu trạng thái POST thành công
         setPostData(response.data);
         toast.success("thêm sp thành công");
       } catch (error) {
