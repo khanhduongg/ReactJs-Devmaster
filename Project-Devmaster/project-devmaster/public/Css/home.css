@@ -41,6 +41,9 @@
     align-items: center;
     cursor: pointer;
 }
+.search-form.active {
+    right: 1rem;
+}
 #section{
     background-image: url(../img/banner.png);
     background-size: cover;

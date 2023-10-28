@@ -299,3 +299,28 @@ font-weight: 700;
     white-space: nowrap;
     animation: type 4.5s steps(24) infinite;
   }
+  .data-search {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 175%;
+    right: 1rem;
+    max-height: 20rem;
+    overflow-y: auto;
+    background: #fff;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 35%);
+    width: 25rem;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    display: block;
+  }
+  .data-search__item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .data-search__item {
+    color: #bd945f;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }

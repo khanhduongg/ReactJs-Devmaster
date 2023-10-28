@@ -3,7 +3,9 @@ export const context = createContext();
 
 const ContextProvider = ({ children }) => {
   //State
+
   const [responseData, setResponseData] = useState([]);
+  const [valueSearch, setValueSearch] = useState("");
   const [data, setData] = useState(() => {
     const list = JSON.parse(localStorage.getItem("wishlistItems"));
     if (list === null || list.length === 0) {
@@ -16,6 +18,8 @@ const ContextProvider = ({ children }) => {
     setResponseData,
     data,
     setData,
+    setValueSearch,
+    valueSearch,
   };
   return <context.Provider value={value}>{children}</context.Provider>;
 };
