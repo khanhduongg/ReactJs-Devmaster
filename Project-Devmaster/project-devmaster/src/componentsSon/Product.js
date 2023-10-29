@@ -43,7 +43,7 @@ function Product({ product, iconProduct }) {
       setIsLoading(false);
     }
   };
-
+  
   useEffect(() => {
     // Gọi hàm fetchDataFromAPI khi postData thay đổi (sau khi POST hoàn thành)
     if (postData) {
@@ -52,9 +52,8 @@ function Product({ product, iconProduct }) {
   }, [postData]);
   const hanldeToggleFavorite = (product) => {
     toggleFavorite(product);
+    localStorage.setItem("wishlistItems", JSON.stringify(responseData));
   };
-  localStorage.setItem("wishlistItems", JSON.stringify(responseData));
-  console.log(responseData);
   return (
     <>
       {isLoading ? (

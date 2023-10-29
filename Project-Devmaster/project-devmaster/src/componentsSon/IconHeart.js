@@ -26,7 +26,7 @@ function IconHeart() {
         ) : (
           <div className="box box-wishlist">
             <p className="box__title">Danh sách yêu thích </p>
-            {data.map((item) => (
+            {data.slice(0,4).map((item) => (
               <ListProductHearts wishlist={item} key={item.id} />
             ))}
             <p className="box__title py-1 my-1">
