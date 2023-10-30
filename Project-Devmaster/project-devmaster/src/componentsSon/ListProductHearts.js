@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
-function ListProductHearts({ wishlist }) {
-  console.log(wishlist);
+import { useEffect } from "react";
+function ListProductHearts({wishlist}) {
+  useEffect(() => {
+    
+  }, [wishlist]);
+
   return (
     <div className="box__content">
       <div>

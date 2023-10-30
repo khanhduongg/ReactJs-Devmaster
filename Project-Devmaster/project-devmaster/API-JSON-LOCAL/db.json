@@ -884,107 +884,28 @@
   ],
   "wishlist": [
     {
-      "product_name": "Kệ TV",
-      "price": 4560000,
+      "product_name": "Tủ âm tường",
+      "price": 8900000,
       "size": [
-        "Cao 0.5 x Rộng 0.4 x Dài 2m"
+        "Dài 800 x Rộng 480mm"
       ],
-      "category": "Phòng khách",
-      "old_price": 5200000,
-      "material": [
-        {
-          "name": "Gỗ sồi",
-          "quantity": 50
-        },
-        {
-          "name": "Gỗ lim",
-          "quantity": 0
-        },
-        {
-          "name": "Gỗ tràm",
-          "quantity": 50
-        }
-      ],
-      "image": [
-        "images/products/phong-khach/002.jpg"
-      ],
-      "details": {
-        "des1": "- Nội thất Hoàng Hoan là đơn vị chuyên cung cấp và sản xuất tất cả các loại kệ tivi giá rẻ, kệ tivi hiện đại. ",
-        "des2": "- Thông số ...",
-        "des3": "- Bảo quản ...",
-        "des4": "- Bảo hành 1 năm ...",
-        "des5": "- Cam kết ..."
-      },
-      "rating": 4,
-      "img_slide": [
-        "images/products/phong-khach/002.jpg"
-      ],
-      "color": "Nâu vân gỗ",
-      "id": "2"
-    },
-    {
-      "product_name": "Bàn uống nước",
-      "price": 8990000,
-      "size": [
-        "Cao 0.4 x Rộng 0.5 x Dài 1m"
-      ],
-      "category": "Phòng khách",
+      "category": "Phòng tắm",
       "old_price": 9500000,
       "material": [
         {
-          "name": "Gỗ sồi",
+          "name": "Gỗ lim",
           "quantity": 50
         },
         {
-          "name": "Gỗ lim",
+          "name": "Gỗ MFC chống ẩm",
           "quantity": 50
         }
       ],
       "image": [
-        "images/products/phong-khach/001.jpg"
+        "images/products/phong-tam/010.jpg"
       ],
       "details": {
-        "des1": "- Bàn uống nước hiện đại giá rẻ là sản phẩm nội thất cần thiết để tăng tối đa sự tiện nghi và vẻ đẹp của bộ ghế sofa cũng như nội thất phòng khách, phòng chờ. ",
-        "des2": "- Thông số ...",
-        "des3": "- Bảo quản ...",
-        "des4": "- Bảo hành 1 năm ...",
-        "des5": "- Cam kết ..."
-      },
-      "rating": 5,
-      "img_slide": [
-        "images/products/phong-khach/001.jpg",
-        "images/products/phong-khach/001a.jpg",
-        "images/products/phong-khach/001b.jpg",
-        "images/products/phong-khach/001c.jpg",
-        "images/products/phong-khach/001d.jpg",
-        "images/products/phong-khach/001e.jpg"
-      ],
-      "color": "Nâu đậm",
-      "id": "1"
-    },
-    {
-      "product_name": "Kệ đồ",
-      "price": 4990000,
-      "size": [
-        "Rộng 0.4 x Cao 0.5 x Dài 1.6m"
-      ],
-      "category": "Phòng khách",
-      "old_price": 6000000,
-      "material": [
-        {
-          "name": "Gỗ lim",
-          "quantity": 0
-        },
-        {
-          "name": "Gỗ sồi",
-          "quantity": 0
-        }
-      ],
-      "image": [
-        "images/products/phong-khach/008.jpg"
-      ],
-      "details": {
-        "des1": "- Kệ để đồ trang trí với màu sắc sang trọng được làm từ loại gỗ nhập khẩu cao cấp, đảm bảo chắc chắn và bền đẹp. Loại kệ này rất thích hợp dùng cho văn phòng và gia đình để trưng bày đồ trang trí và sách.",
+        "des1": "- Tủ âm tường là loại tủ được làm âm và sâu vào bên trong hốc tường nhằm tận dụng những phần khoảng trống trong không gian để tiết kiệm diện tích và tạo sự liền mạch.",
         "des2": "- Thông số ...",
         "des3": "- Bảo quản ...",
         "des4": "- Bảo hành 1 năm ...",
@@ -992,10 +913,41 @@
       },
       "rating": 4,
       "img_slide": [
-        "images/products/phong-khach/008.jpg"
+        "images/products/phong-tam/010.jpg"
       ],
-      "color": "Nâu vân gỗ",
-      "id": "8"
+      "color": "Màu inox đặc trưng",
+      "id": "10"
+    },
+    {
+      "product_name": "Bàn trà",
+      "price": 3600000,
+      "size": [
+        "Dài 1.1 x Rộng 0.6 x Cao 0.4m"
+      ],
+      "category": "Phòng bếp",
+      "old_price": 4000000,
+      "material": [
+        {
+          "name": "Gỗ tự nhiên",
+          "quantity": 50
+        }
+      ],
+      "image": [
+        "images/products/phong-bep/009.jpg"
+      ],
+      "details": {
+        "des1": "-  Chất liệu khung kim loại, kính cường lực cao cấp sang trọng. Mẫu bàn trà kim loại đẹp được thiết kế từ đá dày 8ly chịu được những va đập an toàn cho người sử dụng, hạn chế tối đa vết trầy xước, tuổi thọ sử dụng lâu dài hơn.",
+        "des2": "- Thông số ...",
+        "des3": "- Bảo quản ...",
+        "des4": "- Bảo hành 1 năm ...",
+        "des5": "- Cam kết ..."
+      },
+      "rating": 4,
+      "img_slide": [
+        "images/products/phong-bep/009.jpg"
+      ],
+      "color": "Nâu đậm",
+      "id": "9"
     }
   ]
 }

@@ -14,9 +14,9 @@
 }
 .box-contact p {
     text-transform: uppercase;
-    font-family: Gotham-Ultra;
     color: #bd945f;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 .form-contact input {
     border: 0.2rem solid #bd945f;
@@ -40,4 +40,20 @@
 .box-contact__btn:hover {
     color: #bd945f;
     background-color: #fff;
+}
+.form-contact label {
+    position: absolute;
+    padding: 0px 5px;
+    left: 1rem;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+.form-contact input:focus + label,
+.form-contact input:valid + label {
+  top: 0px;
+  font-size: 0.8rem;
+  color: #bd945f;
 }

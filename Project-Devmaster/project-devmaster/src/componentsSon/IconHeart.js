@@ -1,7 +1,8 @@
-import React, { useEffect, } from "react";
+import React, { useEffect } from "react";
 import ListProductHearts from "./ListProductHearts";
 import { context } from "../context/Context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 function IconHeart() {
   const { responseData } = useContext(context);
   const { data, setData } = useContext(context);
@@ -11,10 +12,10 @@ function IconHeart() {
   return (
     <>
       <div className="icon icon-wishlist">
-        <a>
+        <Link to={"/danh-sach-yeu-thich"}>
           <i className="fa-regular fa-heart" />
-        </a>
-        {data === null || data.length === 0 ? (
+        </Link>
+        {data === null || data?.length === 0 ? (
           <div className="box box-wishlist">
             <div className="box__empty">
               <p className="box__title">Danh sách yêu thích trống !</p>
@@ -26,21 +27,20 @@ function IconHeart() {
         ) : (
           <div className="box box-wishlist">
             <p className="box__title">Danh sách yêu thích </p>
-            {data.slice(0,4).map((item) => (
+            {data?.slice(0, 4).map((item) => (
               <ListProductHearts wishlist={item} key={item.id} />
             ))}
+            <div className="check">
             <p className="box__title py-1 my-1">
-              Danh sách {data.length} sản phẩm{" "}
+              Danh sách {data?.length} sản phẩm{" "}
             </p>
+              <Link className="check__btn nav-link" to={"/danh-sach-yeu-thich"}>
+                Xem chi tiết
+              </Link>
+            </div>
           </div>
         )}
-        <div className="qty"> {data.length}</div>
-        {/*    <div className="check">
-          <p>có {local.length} sản phẩm</p>
-           <Link className="check__btn" to={"/danh-sach-yeu-thich"}>
-        Xem chi tiết
-          </Link>
-         </div> */}
+        <div className="qty"> {data?.length}</div>
       </div>
     </>
   );

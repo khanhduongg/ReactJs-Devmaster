@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,Routes,Route } from "react-router-dom";
+import ListAllWist from"../componentsSon/ListAllWist"
 import IconCart from "../componentsSon/IconCart";
 import IconHeart from "../componentsSon/IconHeart";
 import IconSearch from "../componentsSon/IconSearch";
@@ -8,7 +9,7 @@ function CaterageHeader() {
     <>
       <header id="header" className=" d-flex ">
         <div className="header-logo">
-          <a href="">
+          <a href="/">
             <img className="w-75" src="../img/logo.png" alt="logo" />
           </a>
         </div>
@@ -51,6 +52,9 @@ function CaterageHeader() {
         <div className="group-icon">
           <IconCart/>
           <IconHeart/>
+          <Routes>
+          <Route path="/danh-sach-yeu-thich" element={<ListAllWist/>} />
+          </Routes>
           <IconSearch/>
         {/* <div id="menu-bar">
     <i className="fa-solid fa-bars" />

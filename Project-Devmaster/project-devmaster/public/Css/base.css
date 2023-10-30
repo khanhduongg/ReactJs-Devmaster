@@ -77,6 +77,16 @@ h4:after {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+.search-form__search {
+  padding: 0.25rem 0.75rem;
+  border-left: 1px solid #ccc;
+}
+.search-form i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  color: #ccc;
+}
 .allInfo .info h5:after {
     content: "";
     position: absolute;
@@ -119,6 +129,16 @@ padding: 0;
 }
 .allInfo .info .social {
     margin: 1.5rem 0;
+}
+.allInfo ul li:hover a {
+  margin-left: 0.75rem;
+  color: #fff;
+}
+.allInfo .info .social a:hover i,
+.allInfo .info .social a:hover img {
+  cursor: pointer;
+  box-shadow: -0.3rem 0.3rem 0 #808080;
+  transform: translateY(-0.3rem);
 }
 .credit {
     text-align: center;
