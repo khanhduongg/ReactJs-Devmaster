@@ -2,7 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import axios from "../Api/api-local";
 import { toast } from "react-toastify";
 import { context } from "../context/Context";
-function Product({ product, iconProduct }) {
+function Product( props) {
+  const {product,iconProduct}= props;
   const [postData, setPostData] = useState({});
   const { responseData, setResponseData } = useContext(context);
 
@@ -44,7 +45,9 @@ function Product({ product, iconProduct }) {
         });
     }
   };
-
+  const hanldeToggleFavorite = (product) => {
+    toggleFavorite(product);
+  };
   const fetchDataFromAPI = async () => {
     try {
       setIsLoading(true);
@@ -68,9 +71,7 @@ function Product({ product, iconProduct }) {
       fetchDataFromAPI();
     }
   }, [postData]);
-  const hanldeToggleFavorite = (product) => {
-    toggleFavorite(product);
-  };
+
   localStorage.setItem("wishlistItems", JSON.stringify(responseData));
   return (
     <>
@@ -304,6 +305,8 @@ function Product({ product, iconProduct }) {
                 <button
                   onClick={() => hanldeToggleFavorite(product)}
                   className="btn"
+                  type="button"
+                  id="liveToastBtn"
                 >
                   <i class={iconProduct} />
                 </button>

@@ -45,7 +45,21 @@
     padding: 0.5rem 0.75rem;
     background-color: #bd945f;
     text-align: center;
+    display: block;
 }
+/* .header-item a:after {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 0.3rem solid #bd945f;
+    transition: 0.3s ease;
+}
+.header-item a:hover:after, .header-item a.active:after {
+    width: 50%;
+} */
 .search-form.active {
     right: 1rem;
 }

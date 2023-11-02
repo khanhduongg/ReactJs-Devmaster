@@ -1,11 +1,13 @@
 import axios from "../Api/api-local";
 import React, { useEffect, useState } from "react";
 import Product from "../componentsSon/Product";
+import slugify from "slugify";
 import listNameProducts from "../data/listNameProducts";
 import Slider from "../componentsSon/Slider";
+import { Link } from "react-router-dom";
 function Products() {
   const [listProducts, setListProducts] = useState([]);
-  const [iconProduct, setIconProduct] = useState("fa-regular fa-heart");
+  const [iconProduct] = useState("fa-regular fa-heart");
   useEffect(() => {
     // get api banner
     const getAllData = async () => {
@@ -16,12 +18,12 @@ function Products() {
   }, []);
   const elementProducts = listNameProducts.map((item, index) => {
     return (
-      <div className="all-product__item">
+      <div className="all-product__item" key={index}>
         <div className="all-product__item--title">
           <h4>{Object.values(item)}</h4>
-          <a className="see-all" href="/san-pham/phong-khach">
+          <Link className="see-all" to={`/products/${slugify(item)}`}>
             Xem tất cả
-          </a>
+          </Link>
         </div>
         <div className="row">
           {listProducts

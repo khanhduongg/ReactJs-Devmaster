@@ -6,9 +6,9 @@ function ListProductHearts({wishlist}) {
 
   return (
     <div className="box__content">
-      <div>
+      <>
         <a href="/">
-          <div className="box__content--data">
+          <div className="box__content--data ">
             <div className="details box__empty">
               <img
                 src={`http://cutuananh.devmaster.vn/${wishlist.image}`}
@@ -32,7 +32,7 @@ function ListProductHearts({wishlist}) {
             </h5>
           </div>
         </a>
-      </div>
+      </>
     </div>
   );
 }

@@ -79,6 +79,9 @@
     width: 80%;
     margin-top: 3rem;
 }
+.wishlist-product {
+    padding-top: 1rem;
+}
 .product-card {
     padding: 5px;
     position: relative;

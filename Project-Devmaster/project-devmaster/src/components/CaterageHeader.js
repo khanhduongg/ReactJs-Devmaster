@@ -1,6 +1,5 @@
 import React from "react";
-import { Link,Routes,Route } from "react-router-dom";
-import ListAllWist from"../componentsSon/ListAllWist"
+import { Link } from "react-router-dom";
 import IconCart from "../componentsSon/IconCart";
 import IconHeart from "../componentsSon/IconHeart";
 import IconSearch from "../componentsSon/IconSearch";
@@ -51,10 +50,7 @@ function CaterageHeader() {
         </div>
         <div className="group-icon">
           <IconCart/>
-          <IconHeart/>
-          <Routes>
-          <Route path="/danh-sach-yeu-thich" element={<ListAllWist/>} />
-          </Routes>
+          <IconHeart/> 
           <IconSearch/>
         {/* <div id="menu-bar">
     <i className="fa-solid fa-bars" />

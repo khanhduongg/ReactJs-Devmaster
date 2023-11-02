@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function IconCart() {
   return (
@@ -11,7 +12,9 @@ function IconCart() {
           <div className="box__empty">
             <p className="box__title">Giỏ hàng của bạn đang trống !</p>
             <a href="/san-pham">
-              <div className="check__btn">Mua hàng ngay</div>
+            <Link to={"/products"} className="check__btn text-alin-center ">
+                Mua Hàng Ngay
+              </Link>
             </a>
           </div>
         </div>
