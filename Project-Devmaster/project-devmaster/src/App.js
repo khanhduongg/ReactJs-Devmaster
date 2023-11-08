@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ListAllWish from "./componentsSon/ListAllWist";
 import Products from "./components/Products";
+import ListSearch from "./componentsSon/ListSearch";
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/CaterageNews" element={<CaterageNews />} />
           <Route path="/products" element={<Products />} />
           <Route path="/danh-sach-yeu-thich" element={<ListAllWish />} />
+          <Route path="/search/:valueSearch" element={<ListSearch />} />
           <Route path="/CateragePartner" element={<CateragePartner />} />
           <Route path="/CaterageContact" element={<CaterageContact />} />
         </Routes>

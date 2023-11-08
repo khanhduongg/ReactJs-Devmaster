@@ -13,7 +13,7 @@
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 .header-item{
-    padding: 0 6rem;
+    padding: 0 4rem;
 }
 .header-item-text ul li{
     padding: 0 1rem;
@@ -60,6 +60,9 @@
 .header-item a:hover:after, .header-item a.active:after {
     width: 50%;
 } */
+#menu-bar{
+    display: none;
+}
 .search-form.active {
     right: 1rem;
 }
@@ -221,6 +224,7 @@
 .home-news {
     padding-top: 3rem;
     text-align: center;
+    margin: 0 12rem;
 }
 .home-news .box {
     position: relative;
@@ -391,4 +395,7 @@ b, strong {
 .home-contact__form button:hover {
     color: #fff;
     background: #bd945f;
+}
+.home-partner .slick-track{
+    margin: 0 12rem;
 }

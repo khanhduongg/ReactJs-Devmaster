@@ -9,7 +9,7 @@ function DataSearch({ product, valueSearch }) {
   };
   return (
     <div className="data-search">
-      {product.slice(0, 3).map((item, index) => (
+      {product.slice(0, 4).map((item, index) => (
         <a href="/san-pham/phong-tam/bon-rua-mat" key={index}>
           <div className="data-search__item">
             <img src={`http://apixm.devmaster.vn/${item.image}`} alt="" />

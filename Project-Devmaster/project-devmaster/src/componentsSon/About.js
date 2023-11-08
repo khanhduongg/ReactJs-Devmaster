@@ -14,14 +14,14 @@ function About() {
   return (
     <div>
       <section id="home-aboutUs">
-        <div className="d-flex mt-auto justify-content-center pt-5">
-          <h2 className="text-white">
+        <div className="d-flex mt-auto justify-content-center pt-5 title">
+          <h2 className="text-white ">
             về chúng tôi
             <hr />
           </h2>
         </div>
         <div className="home-aboutUs__content h-100">
-          <div className="" style={{ margin: "0 12rem" }}>
+          <div className="home-aboutUs__img" style={{ margin: "0 12rem" }}>
             <div className="row ">
               <div
                 className="col-md-6 "
@@ -87,7 +87,7 @@ function About() {
               <hr />
             </h2>
           </div>
-          <div className="w-75" style={{ margin: "0 12rem" }}>
+          <div className="w-75 home-aboutUs__img" style={{ margin: "auto" }}>
             <div className="row">
               <div className="col-md-6">
                 <div className="aboutUs-policy__item d-flex">

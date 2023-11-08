@@ -52,9 +52,9 @@ function CaterageHeader() {
           <IconCart/>
           <IconHeart/> 
           <IconSearch/>
-        {/* <div id="menu-bar">
+        <div id="menu-bar">
     <i className="fa-solid fa-bars" />
-  </div> */}
+  </div>
       </div>
       </header>
     </>

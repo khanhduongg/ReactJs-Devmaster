@@ -27,11 +27,12 @@ function Partner() {
             </button>
             <div className="slick-list">
               <div
-                className="slick-trac d-flex align-items-center "
+                className="slick-trac d-flex align-items-center home-partner__item  "
                 style={{
                   width: 4636,
                   opacity: 1,
-                  transform: "translate3d(-1464px, 0px, 0px)",
+                  margin: "0 12rem"
+                  
                 }}
               >
                 <div

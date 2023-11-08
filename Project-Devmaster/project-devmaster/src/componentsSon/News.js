@@ -20,7 +20,7 @@ function News() {
             <hr />
           </h2>
         </div>
-        <div className="home-news w-75 " style={{ margin: "0 12rem" }}>
+        <div className="home-news w-75">
           <div className="row ">
             <div className="col-md-7 home-news__effect">
               <a href="/tin-tuc/cach-chon-sofa-cho-phong-khach-them-sang-trong">
