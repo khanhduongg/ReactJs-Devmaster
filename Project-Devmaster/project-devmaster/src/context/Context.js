@@ -6,7 +6,7 @@ const ContextProvider = ({ children }) => {
 
   const [responseData, setResponseData] = useState([]);
   const [valueSearch, setValueSearch] = useState("");
-  const[ dataSearch,setDataSearch] =useState([])
+  const[ dataSearch,setDataSearch] =useState([]);
   const [data, setData] = useState(() => {
     const list = JSON.parse(localStorage.getItem("wishlistItems"));
     if (list === null || list.length === 0) {

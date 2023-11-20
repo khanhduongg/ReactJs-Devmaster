@@ -2,14 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { context } from "../context/Context";
 import axios from "../Api/api-local";
 import Product from "./Product";
+import ListArrange from "./ListArrange";
+import UpPage from "./UpPage";
 function ListAllWish() {
-  let [numberLoad, setNumberLoad] = useState(4);
   let iconProduct = "fa-solid fa-heart-crack";
+  const [sort, setSort] = useState("");
   const { data, setData } = useContext(context);
-  const handleShowAllProducts = () => {
-    setNumberLoad(numberLoad + data.length);
-    console.log(numberLoad);
-  };
   useEffect(() => {
     const getData = async () => {
       let res = await axios.get("wishlist");
@@ -18,51 +16,48 @@ function ListAllWish() {
     getData();
   }, []);
   const [filters, setFilters] = useState();
-    const handleFilter = (filter) => {
+  const handleFilter = (filter) => {
     setFilters(filter);
-    console.log(filter);
   };
-  useEffect(() => {}, [numberLoad]);
+  // const [number,setNumber]=useState(4)
   return (
     <>
       <div className="box-content all-product wishlist-product">
         <div className="all-product__item ">
-        <div className="all-product__item--title">
-          <h4>Danh sách yêu thích ({data?.length}sản phẩm) </h4>
+          <div className="all-product__item--title">
+            <h4>Danh sách yêu thích ({data?.length}sản phẩm) </h4>
+            <ListArrange
+            product={data}
+            sort={sort}
+            setSort={setSort}
+            onFilter={handleFilter}
+             />
+          </div>
+          <div className="row">
+            {filters === undefined
+              ? data
+                  ?.slice(0,data?.length)
+                  .map((item) => (
+                    <Product
+                      iconProduct={iconProduct}
+                      product={item}
+                      key={item.id}
+                    />
+                  ))
+              : filters
+                  .slice(0,data?.length)
+                  .map((item) => (
+                    <Product
+                      iconProduct={iconProduct}
+                      product={item}
+                      key={item.id}
+                    />
+                  ))}
+          </div>
         </div>
-        <div className="row">
-          {filters === undefined
-            ? data
-                ?.slice(0, numberLoad)
-                .map((item) => (
-                  <Product
-                    iconProduct={iconProduct}
-                    filters={filters}
-                    product={item}
-                    key={item.id}
-                  />
-                ))
-            : filters
-                .slice(0, numberLoad)
-                .map((item) => (
-                  <Product
-                    iconProduct={iconProduct}
-                    filters={filters}
-                    product={item}
-                    key={item.id}
-                  />
-                ))}
-        </div>
-        {/* <div className="load-more">
-          <button
-            type="button"
-            className="load-more__btn"
-            onClick={handleShowAllProducts}
-          >
-            Xem thêm
-          </button>
-        </div> */}
-        </div>
+        {/* <>
+        <UpPage setNumber={setNumber} products={data} />
+        </> */}
       </div>
     </>
   );

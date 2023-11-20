@@ -49,13 +49,13 @@ function CaterageHeader() {
           </div>
         </div>
         <div className="group-icon">
-          <IconCart/>
-          <IconHeart/> 
-          <IconSearch/>
-        <div id="menu-bar">
-    <i className="fa-solid fa-bars" />
-  </div>
-      </div>
+          <IconCart />
+          <IconHeart />
+          <IconSearch />
+          <div id="menu-bar">
+            <i className="fa-solid fa-bars" />
+          </div>
+        </div>
       </header>
     </>
   );

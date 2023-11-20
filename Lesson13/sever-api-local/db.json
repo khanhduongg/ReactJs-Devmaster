@@ -1,0 +1,30 @@
+{
+    "users":[
+        {
+            "id":111,"usersname":"Duong Duong","password":"123"
+        },
+        {
+            "id":111,"usersname":"Duong Duong","password":"123"
+        },
+        {
+            "id":111,"usersname":"Duong Duong","password":"123"
+        }
+
+    ],
+    "students":[
+        {
+            "studentId":"SV01","studentName":"Duong Duong","age":"22"
+        },
+        {
+            "studentId":"SV02","studentName":"Duong Duong","age":"23"
+        },
+        {
+            "studentId":"SV03","studentName":"Duong Duong","age":"24"
+        }
+    ]    
+
+
+
+    
+
+}

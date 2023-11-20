@@ -1,8 +1,4 @@
-import { useEffect } from "react";
 function ListProductHearts({wishlist}) {
-  useEffect(() => {
-    
-  }, [wishlist]);
 
   return (
     <div className="box__content">
@@ -11,11 +7,11 @@ function ListProductHearts({wishlist}) {
           <div className="box__content--data ">
             <div className="details box__empty">
               <img
-                src={`http://cutuananh.devmaster.vn/${wishlist.image}`}
+                src={`http://cutuananh.devmaster.vn/${wishlist?.image}`}
                 alt=""
               />
               <div>
-                <h5>{wishlist.product_name}</h5>
+                <h5>{wishlist?.product_name}</h5>
                 <h5>
                   &nbsp;
                   <i className="fa-solid fa-star" />
@@ -27,7 +23,7 @@ function ListProductHearts({wishlist}) {
                 {Intl.NumberFormat("it-IT", {
                   style: "currency",
                   currency: "VND",
-                }).format(wishlist.price)}
+                }).format(wishlist?.price)}
               </span>
             </h5>
           </div>

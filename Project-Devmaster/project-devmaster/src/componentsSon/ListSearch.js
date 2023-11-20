@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { context } from "../context/Context";
 import Product from "./Product";
+import ListArrange from "./ListArrange";
 function ListSearch() {
   const { dataSearch, valueSearch } = useContext(context);
-  console.log(valueSearch);
+  const [sort, setSort] = useState("");
   return (
     <div className="all-product__item container ">
       {dataSearch?.length == 0 ? (
@@ -13,13 +14,22 @@ function ListSearch() {
       ) : (
         <div className="all-product__item--title">
           <h4>Kết quả tìm kiếm cho từ khóa "{valueSearch}"</h4>
+          <ListArrange 
+          product={dataSearch} 
+          sort={sort} 
+          setSort={setSort} />
         </div>
       )}
       <div className="row">
         {dataSearch.slice(0, 4).map((item) => (
-          <Product iconProduct={'fa-regular fa-heart'} product={item} key={item.id} />
+          <Product
+            iconProduct={"fa-regular fa-heart"}
+            product={item}
+            key={item.id}
+          />
         ))}
       </div>
+
       {/* <div className="load-more">
         <button type="button" className="load-more__btn">
           Xem thêm

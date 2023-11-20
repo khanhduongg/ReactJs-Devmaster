@@ -7,24 +7,23 @@ function Product( props) {
   const [postData, setPostData] = useState({});
   const { responseData, setResponseData } = useContext(context);
 
-  const [deletedObjectId, setDeletedObjectId] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   // Hàm gọi API POST
   const toggleFavorite = async (product) => {
-    if (iconProduct == "fa-regular fa-heart") {
+    if (iconProduct === "fa-regular fa-heart") {
       try {
-        setIsLoading(true);
+        // setIsLoading(true);
         // Thực hiện yêu cầu POST
         const response = await axios.post("wishlist", product);
         // Lưu trạng thái POST thành công
         setPostData(response.data);
-        toast.success("thêm sp thành công");
+        toast.success("Thêm sản phẩm thành công");
       } catch (error) {
         toast.error(" Sản phẩm tồn tại ");
         // Xử lý lỗi POST
         console.error("aaa");
       } finally {
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     } else {
       axios
@@ -38,10 +37,9 @@ function Product( props) {
           );
           setResponseData(updatedObjects);
           // Đặt giá trị deletedObjectId để thông báo xóa thành công (nếu cần)
-          setDeletedObjectId(product.id);
         })
         .catch((error) => {
-          toast.error("Xóa khong thành công:");
+          toast.error("Xóa không thành công:");
         });
     }
   };
@@ -50,7 +48,7 @@ function Product( props) {
   };
   const fetchDataFromAPI = async () => {
     try {
-      setIsLoading(true);
+      // setIsLoading(true);
 
       // Thực hiện yêu cầu GET hoặc loại yêu cầu khác
       const response = await axios.get("wishlist");
@@ -61,7 +59,7 @@ function Product( props) {
       // Xử lý lỗi GET hoặc loại yêu cầu khác
       console.error(error);
     } finally {
-      setIsLoading(false);
+      // setIsLoading(false);
     }
   };
 

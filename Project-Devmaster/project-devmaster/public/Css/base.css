@@ -344,3 +344,8 @@ font-weight: 700;
     align-items: center;
     gap: 1.5rem;
   }
+  .search-product__select {
+    border: 1px solid #2c2e53;
+    height: 3rem;
+    padding: 0 0.5rem;
+  }
